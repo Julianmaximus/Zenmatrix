@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+User.create!(
+  email: 'test@example.com',
+  password: 'password',
+  encrypted_password: User.new.send(:password_digest, 'password'), # Devise method to encrypt password
+  first_name: 'Test',
+  last_name: 'User'
+)
+
