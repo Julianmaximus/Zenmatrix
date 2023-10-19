@@ -7,11 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-User.create!(
-  email: 'another_test@example.com',
-  password: 'password',
-  encrypted_password: User.new.send(:password_digest, 'password'), # Devise method to encrypt password
-  first_name: 'Test',
-  last_name: 'User',
-  gender: 'Male' # or 'Female', 'Other', etc.
-)
+10.times do
+  User.create!(
+    email: Faker::Internet.unique.email,
+    password: 'password',
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    gender: ['Male', 'Female', 'Other'].sample
+  )
+end
+
