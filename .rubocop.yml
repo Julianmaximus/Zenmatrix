@@ -43,3 +43,5 @@ Bundler/OrderedGems:
   Enabled: false
 Naming/VariableNumber:
   Enabled: false
+Metrics/BlockLength:
+  Max: 50 

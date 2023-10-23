@@ -41,13 +41,18 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# passwords and login
-gem 'devise'
+# Use Sass to process CSS
+gem "sassc-rails"
 
-gem 'active_scaffold'
+# passwords and login
+gem "bootstrap", "~> 5.2"
+gem "devise"
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form", github: "heartcombo/simple_form"
 
 # seed data for development
-gem 'faker'
+
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -71,6 +76,15 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
+  gem "capybara" # <-- Already there
+	gem "selenium-webdriver" # <-- Already there
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 6.0.0'
+  gem "rubocop-rspec"
+  gem "rubocop-capybara"
+  gem 'warden-rspec-rails'
+	gem 'shoulda-matchers', '~> 5.0'
+  gem "webdrivers"
+  gem 'faker'
+  gem 'rubocop-rails', require: false
 end
