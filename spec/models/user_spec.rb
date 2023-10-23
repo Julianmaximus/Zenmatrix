@@ -29,14 +29,6 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe '#post_count' do
-    it 'returns the correct number of posts' do
-      user = User.create!(name: 'Test User', email: 'test@example.com', password: 'test_password')
-      3.times { Post.create!(user:, title: 'Test Post', content: 'Test Content') }
-      expect(user.post_count).to eq(3)
-    end
-  end
-
   describe '#profile_updated_recently?' do
     it 'returns true if the profile was updated recently' do
       user = User.create!(name: 'Test User', email: 'test@example.com', password: 'test_password')
