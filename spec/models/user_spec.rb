@@ -29,16 +29,15 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe '#profile_updated_recently?' do
+  describe "#profile_updated_recently?" do
     it 'returns false if the profile was not updated recently' do
-      user = FactoryBot.create(:user)
-      user.update!(updated_at: 8.days.ago)
-      expect(user.profile_updated_recently?).to be false
-    end
-
-    it 'returns false if the profile was not updated recently' do
-      user = User.create!(name: 'Test User', email: 'test@example.com', password: 'test_password')
-      user.update!(updated_at: 1.month.ago)
+      user = User.create!(
+        first_name: 'Test',
+        last_name: 'User',
+        email: 'test@example.com',
+        password: 'test_password'
+      )
+      user.update!(updated_at: 1.week.ago)
       expect(user.profile_updated_recently?).to be false
     end
   end

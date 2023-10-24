@@ -30,3 +30,7 @@ users.each do |user|
     )
   end
 end
+
+10.times do
+  Category.create!(name: Faker::Science.element)
+end
