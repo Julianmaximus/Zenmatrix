@@ -1,3 +1,5 @@
+# spec/factories.rb
+
 require 'faker'
 
 FactoryBot.define do
@@ -5,6 +7,12 @@ FactoryBot.define do
     first_name { Faker::Name.first_name }
     last_name { Faker::Name.last_name }
     email { Faker::Internet.unique.email }
-    password { "123456" }
+    password { "password" }
+  end
+
+  factory :post do
+    title { Faker::Lorem.sentence(word_count: 3) }
+    body { Faker::Lorem.paragraph(sentence_count: 2) }
+    user
   end
 end

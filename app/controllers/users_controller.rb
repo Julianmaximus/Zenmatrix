@@ -9,6 +9,5 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-
   # Add more actions as needed
 end

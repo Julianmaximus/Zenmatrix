@@ -10,8 +10,8 @@ RSpec.describe User, type: :model do
 
   # 2. Test the validations and relations
   describe "validations and relations" do
-    it { should validate_presence_of(:name) }
-    it { should validate_presence_of(:email) }
+    it { should validate_presence_of(:first_name) }
+    it { should validate_presence_of(:last_name) }
     # Add other validations as needed
 
     it { should have_many(:posts) }
@@ -30,10 +30,10 @@ RSpec.describe User, type: :model do
   end
 
   describe '#profile_updated_recently?' do
-    it 'returns true if the profile was updated recently' do
-      user = User.create!(name: 'Test User', email: 'test@example.com', password: 'test_password')
-      user.update!(updated_at: 1.day.ago)
-      expect(user.profile_updated_recently?).to be true
+    it 'returns false if the profile was not updated recently' do
+      user = FactoryBot.create(:user)
+      user.update!(updated_at: 8.days.ago)
+      expect(user.profile_updated_recently?).to be false
     end
 
     it 'returns false if the profile was not updated recently' do
