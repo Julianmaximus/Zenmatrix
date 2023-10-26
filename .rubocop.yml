@@ -1,15 +1,17 @@
+# @format
+
 AllCops:
   NewCops: enable
   Exclude:
-    - 'bin/**/*'
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'node_modules/**/*'
-    - 'script/**/*'
-    - 'support/**/*'
-    - 'tmp/**/*'
-    - 'test/**/*'
-    - 'vendor/**/*'
+    - "bin/**/*"
+    - "db/**/*"
+    - "config/**/*"
+    - "node_modules/**/*"
+    - "script/**/*"
+    - "support/**/*"
+    - "tmp/**/*"
+    - "test/**/*"
+    - "vendor/**/*"
 
 Style/ConditionalAssignment:
   Enabled: false
@@ -43,3 +45,7 @@ Bundler/OrderedGems:
   Enabled: false
 Naming/VariableNumber:
   Enabled: false
+Metrics/BlockLength:
+  Max: 150
+Metrics/MethodLength:
+  Max: 30

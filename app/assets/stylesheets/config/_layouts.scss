@@ -1,0 +1,11 @@
+.page--fixed--container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page--scroll--container {
+  flex: 1;
+  overflow: scroll;
+}

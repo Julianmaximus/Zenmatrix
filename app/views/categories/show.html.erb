@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @category %>
+
+<h2>Posts:</h2>
+<% @category.posts.each do |post| %>
+  <div>
+    <h3><%= post.title %></h3>
+    <p><%= post.body %></p>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to "Edit this category", edit_category_path(@category) %> |
+  <%= link_to "Back to categories", categories_path %>
+
+  <%= button_to "Destroy this category", @category, method: :delete %>
+</div>
