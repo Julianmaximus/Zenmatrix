@@ -2,9 +2,10 @@ require "rails_helper"
 
 RSpec.describe "Posts", type: :request do
   let(:user) { User.create!(email: 'now@example.com', password: '123456', first_name: 'Test', last_name: 'User') }
+  let(:category) { Category.create!(name: 'Test Category') }
 
   before(:each) do
-    @post = FactoryBot.create(:post)
+    @post = FactoryBot.create(:post, category: category)
   end
 
   describe "GET /posts" do
@@ -23,11 +24,23 @@ RSpec.describe "Posts", type: :request do
     end
   end
 
+  describe "POST /posts" do
+    it "should create post" do
+      sign_in user
+
+      expect do
+        post posts_path,
+             params: { post: { title: 'Test Title', body: 'Test Body', user_id: user.id, category_id: category.id } }
+      end.to change(Post, :count).by(1)
+
+      expect(response).to redirect_to(post_path(Post.last))
+    end
+  end
+
   describe "GET /posts/:id" do
     it "should show post" do
       sign_in user
-      post = Post.create!(title: 'Test Title', body: 'Test body', user:)
-      get post_path(post)
+      get post_path(@post)
       expect(response).to have_http_status(:success)
     end
   end
@@ -35,8 +48,7 @@ RSpec.describe "Posts", type: :request do
   describe "GET /posts/:id/edit" do
     it "should get edit" do
       sign_in user
-      post = Post.create!(title: 'Test Title', body: 'Test body', user:)
-      get edit_post_path(post)
+      get edit_post_path(@post)
       expect(response).to have_http_status(:success)
     end
   end
@@ -44,18 +56,16 @@ RSpec.describe "Posts", type: :request do
   describe "PATCH /posts/:id" do
     it "should update post" do
       sign_in user
-      post = Post.create!(title: 'Test Title', body: 'Test body', user:)
-      patch post_path(post), params: { post: { title: 'Updated Title' } }
-      expect(response).to redirect_to(post_path(post))
+      patch post_path(@post), params: { post: { title: 'Updated Title' } }
+      expect(response).to redirect_to(post_path(@post))
     end
   end
 
   describe "DELETE /posts/:id" do
     it "should destroy post" do
       sign_in user
-      post = Post.create!(title: 'Test Title', body: 'Test body', user:)
       expect do
-        delete post_path(post)
+        delete post_path(@post)
       end.to change(Post, :count).by(-1)
       expect(response).to redirect_to(posts_path)
     end

@@ -1,5 +1,3 @@
-# spec/factories.rb
-
 require 'faker'
 
 FactoryBot.define do
@@ -14,5 +12,11 @@ FactoryBot.define do
     title { Faker::Lorem.sentence(word_count: 3) }
     body { Faker::Lorem.paragraph(sentence_count: 2) }
     user
+    category
+  end
+
+  factory :category do
+    name { "Test Category" }
+    # add other attributes for Category here
   end
 end
