@@ -1,14 +1,20 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 
   validates :first_name, presence: true
   validates :last_name, presence: true
   # validates :email, presence: true
+
   has_many :posts
+  has_one_attached :avatar
+  attribute :admin, :boolean
 
   def post_count
     posts.count
   end
 
-  def profile_updated_recently? = updated_at >= 1.week.ago
+  def profile_updated_recently?
+    updated_at >= 1.week.ago
+  end
 end

@@ -1,0 +1,11 @@
+.navbar {
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+body {
+  padding-top: 70px; /* Adjust this value based on the height of your navbar */
+}
