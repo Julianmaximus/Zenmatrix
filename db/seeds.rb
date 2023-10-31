@@ -12,7 +12,8 @@ require 'faker'
 users = User.all
 # Create categories
 10.times do
-  Category.create!(name: Faker::Science.element)
+  name = Faker::Science.unique.element
+  Category.create!(name: name)
 end
 
 # Create users

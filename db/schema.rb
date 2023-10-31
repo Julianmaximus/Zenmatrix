@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2023_10_29_231602) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -47,7 +50,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_29_231602) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "title"
     t.text "body"
     t.datetime "created_at", null: false
@@ -68,6 +71,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_29_231602) do
     t.datetime "remember_created_at"
     t.string "first_name"
     t.string "last_name"
+    t.string "name"
     t.string "gender"
     t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
