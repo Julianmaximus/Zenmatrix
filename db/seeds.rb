@@ -10,27 +10,31 @@ require 'faker'
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 users = User.all
+# Create categories
+10.times do
+  name = Faker::Science.unique.element
+  Category.create!(name: name)
+end
+
+# Create users
 10.times do
   User.create!(
     email: Faker::Internet.unique.email,
     password: Faker::Internet.password,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    name: Faker::Name.name
+    gender: Faker::Gender.binary_type,
+    admin: Faker::Boolean.boolean
   )
 end
 
-# Create some posts for each user
-users.each do |user|
+# Create posts
+User.all.each do |user|
   5.times do
-    Post.create!(
+    user.posts.create!(
       title: Faker::Lorem.sentence(word_count: 3),
       body: Faker::Lorem.paragraph(sentence_count: 2),
-      user_id: user.id
+      category_id: Category.pluck(:id).sample
     )
   end
-end
-
-10.times do
-  Category.create!(name: Faker::Science.element)
 end
