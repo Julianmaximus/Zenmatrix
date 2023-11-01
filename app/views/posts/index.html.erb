@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Posts</h1>
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <div class="post">
+      <%= render post %>
+      <% if post.image.attached? %>
+        <div class="post-image">
+          <%= image_tag url_for(post.image) %>
+        </div>
+      <% end %>
+      <p class="post-title">
+        <%= link_to post.title, post %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<%= link_to "New post", new_post_path, class: "new-post-link" %>

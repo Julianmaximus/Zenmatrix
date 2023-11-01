@@ -1,0 +1,39 @@
+// Styles for each post
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%; // Adjust this to change the width of the post
+  margin: 0 auto;
+}
+
+// Styles for the post image
+.post-image img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+// Styles for the post title
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+// Styles for the "New post" link
+.new-post-link {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+// Styles to center everything
+#posts {
+  align-items: center;
+}
