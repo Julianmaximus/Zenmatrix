@@ -1,11 +1,15 @@
 <div id="posts">
-<h1>Posts</h1>
+  <h1>Posts</h1>
   <% @posts.each do |post| %>
     <div class="post">
-      <%= render post %>
       <p class="post-title">
         <%= link_to post.title, post %>
       </p>
+
+      <p class="post-preview">
+        <%= truncate_words(post.body, 50) %>
+      </p>
+
       <% if post.image.attached? %>
         <div class="post-image">
           <%= link_to (image_tag url_for(post.image)), post %>
@@ -13,6 +17,6 @@
       <% end %>
     </div>
   <% end %>
-<%= link_to "New post", new_post_path, class: "new-post-link" %>
-<%= paginate @posts %>
+  <%= link_to "New post", new_post_path, class: "new-post-link" %>
+  <%= paginate @posts %>
 </div>
