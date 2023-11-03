@@ -1,0 +1,201 @@
+// Styles for each post
+.post {
+  background-color: rgb(248, 247, 250);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%; // Adjust this to change the width of the post
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #EBEBEB;
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+// Styles for the post image
+.post-image img {
+  max-width: 70%;
+  height: auto;
+  margin-left: -5px;
+  margin-right: -5px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+// Styles for the post title
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+// Styles for the "New post" link
+.new-post-link {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+// Styles to center everything
+#posts {
+  align-items: center;
+  text-align: center;
+}
+
+// Styles for pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.pagination a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #333;
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  background-color: #e9ecef;
+}
+
+.pagination .current {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination .next_page,
+.pagination .previous_page {
+  background-color: #6c757d;
+  color: #fff;
+}
+// styles for posts pagination end
+
+// styles for post show page start
+.post-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.post-body {
+  font-size: 16px;
+  color: #666;
+}
+
+.post-category {
+  font-size: 14px;
+  color: #999;
+}
+
+.post-actions {
+  margin-top: 20px;
+}
+
+.edit-post-link,
+.back-to-posts-link {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.destroy-post-button {
+  background-color: rgb(245, 43, 43);
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.edit-post-link:hover,
+.back-to-posts-link:hover,
+.destroy-post-button:hover {
+  background-color: #0056b3;
+}
+// styles for post show page end
+
+// styles for post form start
+.post-form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.form-inputs {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.form-control-file {
+  border: none;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+// styles for post form end
+
+// styles for back button for new post start
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #5aa6f7;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+// styles for back button for new post end
+
+// styles for button group for edit post page start
+.button-group {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}

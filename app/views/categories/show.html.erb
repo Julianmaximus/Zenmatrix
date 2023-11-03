@@ -5,7 +5,7 @@
 <h2>Posts:</h2>
 <% @category.posts.each do |post| %>
   <div>
-    <h3><%= post.title %></h3>
+    <h3><%= link_to post.title, post_path(post) %></h3>
     <p><%= post.body %></p>
   </div>
 <% end %>
