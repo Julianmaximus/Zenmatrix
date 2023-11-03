@@ -1,19 +1,18 @@
-<h1>Posts</h1>
-
 <div id="posts">
+<h1>Posts</h1>
   <% @posts.each do |post| %>
     <div class="post">
       <%= render post %>
-      <% if post.image.attached? %>
-        <div class="post-image">
-          <%= image_tag url_for(post.image) %>
-        </div>
-      <% end %>
       <p class="post-title">
         <%= link_to post.title, post %>
       </p>
+      <% if post.image.attached? %>
+        <div class="post-image">
+          <%= link_to (image_tag url_for(post.image)), post %>
+        </div>
+      <% end %>
     </div>
   <% end %>
-</div>
-
 <%= link_to "New post", new_post_path, class: "new-post-link" %>
+<%= paginate @posts %>
+</div>
