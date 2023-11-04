@@ -199,3 +199,10 @@
 .btn-secondary {
   background-color: #6c757d;
 }
+
+@media screen and (max-width: 768px) {
+  .post {
+    width: 100%;
+  }
+  
+}
