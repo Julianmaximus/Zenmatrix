@@ -4,13 +4,15 @@
 
 <div id="categories">
   <% @categories.each do |category| %>
-    <div class="category">
-      <%= render category %>
-      <p class="category-link">
-        <%= link_to "Show this category", category %>
-      </p>
-    </div>
+    <%= link_to category_path(category), class: "category-link" do %>
+      <div class="category">
+        <%= render category %>
+        <p>Show this category</p>
+      </div>
+    <% end %>
   <% end %>
 </div>
-
-<%= link_to "New category", new_category_path, class: "new-category-link" %>
+<div class="paginate-button">
+  <%= paginate @categories %>
+  <%= link_to "New category", new_category_path, class: "new-category-link" %>
+</div>
