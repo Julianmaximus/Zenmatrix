@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%; // Adjust this to change the width of the post
+  width: 70%; // Adjust this to change the width of the post
   height: auto;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -20,11 +20,12 @@
 // Styles for the post image
 .post-image img {
   max-width: 70%;
-  height: auto;
+  height: 100%;
   margin-left: -5px;
   margin-right: -5px;
   border-radius: 5px;
   object-fit: cover;
+  position: relative;
 }
 
 // Styles for the post title
@@ -35,7 +36,7 @@
 
 // Styles for the "New post" link
 .new-post-link {
-  background-color: #007BFF;
+  background-color: #546e7a;
   color: white;
   padding: 10px 10px;
   text-decoration: none;
@@ -102,7 +103,7 @@
 
 .edit-post-link,
 .back-to-posts-link {
-  background-color: #007bff;
+  background-color: #546e7a;
   color: #fff;
   padding: 10px 15px;
   text-decoration: none;
@@ -198,4 +199,11 @@
 
 .btn-secondary {
   background-color: #6c757d;
+}
+
+@media screen and (max-width: 960px) {
+  .post {
+    width: 100%;
+  }
+
 }
