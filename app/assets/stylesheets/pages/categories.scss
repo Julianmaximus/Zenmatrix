@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 30px;
+  padding: 20px;
   background-color: #f0f0f0;
 }
 
@@ -22,6 +22,7 @@ body {
 .category {
   color: white;
   margin: 5px;
+  margin-right: 5px;
   padding: 60px;
   box-sizing: border-box;
   flex: 1 1 auto;
@@ -72,3 +73,116 @@ body {
   box-shadow: 3px 3px 3px #ccc;
   justify-content: center;
 }
+
+// Styles for category show page
+.notice {
+  font-size: 1.2em;
+}
+
+.category-show {
+  background-image: asset-url('skytree.jpg');
+  color: #212529;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  padding: 60px;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 5px;
+  background-repeat: no-repeat;
+}
+
+.posts-header {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.post-show {
+  margin-bottom: 1em;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%; // Adjust this to change the width of the post
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border: 1px solid #EBEBEB;
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  .post-title {
+    font-size: 1.3em;
+  }
+
+  .post-body {
+    font-size: 1.1em;
+  }
+}
+
+.category-actions {
+  margin-top: 2em;
+
+  .edit-category-link,
+  .back-to-categories-link {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #546e7a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 3px 3px 3px #ccc;
+  }
+
+  .destroy-category-button {
+    background-color: rgb(236, 48, 48);
+    color: white;
+    border: none;
+  }
+}
+// styles for category show page end
+
+// Styles for category form
+.category-form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-name, .input-description {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #546e7a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: darkgray; /* change the background color when hovered */
+  color: black;
+}
+// styles for category form end

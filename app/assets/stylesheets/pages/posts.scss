@@ -19,12 +19,13 @@
 
 // Styles for the post image
 .post-image img {
-  max-width: 80%;
-  height: auto;
+  max-width: 70%;
+  height: 100%;
   margin-left: -5px;
   margin-right: -5px;
   border-radius: 5px;
   object-fit: cover;
+  position: relative;
 }
 
 // Styles for the post title
@@ -35,7 +36,7 @@
 
 // Styles for the "New post" link
 .new-post-link {
-  background-color: #007BFF;
+  background-color: #546e7a;
   color: white;
   padding: 10px 10px;
   text-decoration: none;
@@ -102,7 +103,7 @@
 
 .edit-post-link,
 .back-to-posts-link {
-  background-color: #007bff;
+  background-color: #546e7a;
   color: #fff;
   padding: 10px 15px;
   text-decoration: none;
