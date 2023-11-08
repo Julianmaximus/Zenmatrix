@@ -1,0 +1,111 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.container-fluid {
+  background: linear-gradient(to right,  #203354, #23395d);
+  display: flex;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+// Navbar
+.navbar {
+  background: linear-gradient(to right,  #203354, #23395d);
+}
+
+// Navbar Brand
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  img {
+    height: 30px; // Adjust as needed
+    width: auto; // Keeps the aspect ratio
+  }
+}
+
+// Navbar Toggler
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+
+  .navbar-toggler-icon {
+    background-color: #333;
+  }
+}
+
+// Navbar Links
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      color: white;
+
+      &.active,
+      &:hover {
+        color: gray;
+      }
+
+      &.disabled {
+        color: #6c757d;
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        color: #333;
+
+        &.disabled {
+          color: #6c757d;
+        }
+      }
+
+      .dropdown-divider {
+        background-color: #333;
+      }
+    }
+  }
+}
+
+// Navbar Search
+.form-control {
+  background-color: transparent;
+  border-color: #ccc;
+  color: white;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  margin: 5px;
+}
+
+.form-control::placeholder {
+  color: gray;
+}
+
+
+// Navbar Search Button
+.btn-outline-success {
+  color: gray;
+  border-color: #ccc;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin: 5px;
+}
+
+/* Styles for screens that are at least 768px wide */
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar .nav-item {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}

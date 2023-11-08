@@ -15,18 +15,27 @@
       <%= link_to 'Sign In', new_user_session_path %>
     <% end %>
 
-
   </head>
 
   <body>
-  <div>
-    <%= render "shared/navbar" if user_signed_in? %>
-  </div>
+    <div>
+      <% if content_for :navbar %>
+        <%= yield :navbar %>
+      <% else %>
+        <%= render "shared/navbar" %>
+      <% end %>
+    </div>
 
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: name %>
-  <% end %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
 
     <%= yield %>
+
+    <% if content_for :footer %>
+      <%= yield :footer %>
+    <% else %>
+      <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>
