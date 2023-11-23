@@ -97,6 +97,10 @@ body {
   margin: 5px;
 }
 
+.navbar .nav-link.white-text {
+  color: white !important;
+}
+
 /* Styles for screens that are at least 768px wide */
 @media (min-width: 768px) {
   .navbar {

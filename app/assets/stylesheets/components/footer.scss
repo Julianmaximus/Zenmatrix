@@ -2,43 +2,57 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 60px;   /* Equal to the height of your footer */
-  box-sizing: border-box;
 }
 
-.footer {
-background-color: #0e2332;
-bottom: 0;
-width: 100%;
-height: 60px;
-color: white;
-padding: 20px 0;
-}
-
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.footer .footer-text p.text-muted {
-  margin: 0;
+footer {
+  background-color: #123558;
   color: white;
+  padding: 20px 0;
+  margin-top: auto;
 }
 
-.footer nav ul {
+footer h5 {
+  margin-bottom: 20px;
+}
+
+footer ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
-  display: flex;
 }
 
-.footer nav ul li {
-  margin-left: 20px;
+footer ul li {
+  line-height: 2;
 }
 
-.footer nav ul li a {
-  color: white;
+footer ul li a {
+  color: #6c757d;
   text-decoration: none;
+}
+
+footer .social ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer .social ul li:last-child {
+  margin-right: 0;
+}
+
+footer .social ul li a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+footer .social ul li a.facebook {
+  background-image: url(asset_path('facebook.png'));
+}
+
+footer .social ul li a.twitter {
+  background-image: url(asset_path('twitter.png'));
+}
+
+footer .social ul li a.linkedin {
+  background-image: url(asset_path('linkedin.png'));
 }

@@ -1,15 +1,34 @@
-<footer class="footer">
+<footer>
   <div class="container">
-    <div class="footer-text">
-      <p class="text-muted">© #{Time.now.year} Your Blog Name. All rights reserved.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>About</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu ante eget nisl convallis tempus.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Links</h5>
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+          <li><%= link_to 'Privacy Policy', privacy_policy_path %></li>
+          <li><%= link_to 'Terms of Service', terms_path %></li>
+        </ul>
+
+      </div>
+      <div class="col-md-4">
+        <h5>Social</h5>
+        <ul>
+          <li><%= link_to image_tag('facebook.png'), 'https://www.facebook.com' %></li>
+          <li><%= link_to image_tag('twitter.png'), 'https://www.twitter.com' %></li>
+          <li><%= link_to image_tag('linkedin.png'), 'https://www.linkedin.com' %></li>
+        </ul>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/privacy_policy">Privacy Policy</a></li>
-        <li><a href="/terms">Terms of Service</a></li>
-      </ul>
-    </nav>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="copyright">© <%= Time.now.year %> Zenmatrix. All rights reserved.</p>
+      </div>
+    </div>
   </div>
 </footer>
