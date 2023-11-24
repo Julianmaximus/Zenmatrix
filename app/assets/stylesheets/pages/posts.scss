@@ -26,6 +26,11 @@
   border-radius: 5px;
   object-fit: cover;
   position: relative;
+  transition: transform 0.3s ease;
+}
+
+.post-image img:hover {
+  transform: scale(1.02);
 }
 
 // Styles for the post title
