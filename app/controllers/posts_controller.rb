@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
   before_action :set_post, only: %i[show edit update destroy]
 
   # GET /posts or /posts.json
@@ -55,6 +56,11 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    @posts = Post.where("title LIKE ?", "%#{params[:query]}%").page(params[:page]).per(10)
+    render :index
   end
 
   private

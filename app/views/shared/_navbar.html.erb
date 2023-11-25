@@ -1,21 +1,45 @@
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: light blue;">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Zenmatrix</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag("zenmatrix-logo.png", alt: "Your Logo") %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <%= link_to 'Blog Posts', posts_path, class: 'nav-link active white-text', 'aria-current': 'page' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <%= link_to 'Categories', categories_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </a>
+          <ul class="dropdown-menu">
+            <% if user_signed_in? %>
+              <li><%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %></li>
+              <li><%= link_to 'Sign Out', destroy_user_session_path, method: :get, class: 'dropdown-item' %></li>
+            <% else %>
+              <li><%= link_to 'Sign In', new_user_session_path, class: 'dropdown-item' %></li>
+              <li><%= link_to 'Sign Up', new_user_registration_path, class: 'dropdown-item' %></li>
+            <% end %>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= link_to 'Contact', contact_path, class: 'dropdown-item' %></li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
+
+      <%= form_with(url: search_posts_path, method: :get, local: true, class: "d-flex") do %>
+        <%= text_field_tag :query, params[:query], placeholder: "Search", class: "form-control me-2" %>
+        <%= button_tag "Search", class: "btn btn-outline-success" %>
+      <% end %>
+
     </div>
   </div>
 </nav>

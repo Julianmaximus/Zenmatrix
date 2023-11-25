@@ -1,7 +1,5 @@
 <p style="color: green" class="notice"><%= notice %></p>
 
-<h1>Categories</h1>
-
 <div id="categories">
   <% @categories.each do |category| %>
     <%= link_to category_path(category), class: "category-link" do %>
@@ -13,6 +11,6 @@
   <% end %>
 </div>
 <div class="paginate-button">
-  <%= paginate @categories %>
   <%= link_to "New category", new_category_path, class: "new-category-link" %>
+  <%= paginate @categories %>
 </div>

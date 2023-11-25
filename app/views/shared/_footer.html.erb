@@ -1,0 +1,45 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>About Zenmatrix</h5>
+
+        <p>
+          Welcome to Zenmatrix, a sanctuary for those seeking physical and mental wellness.
+          We believe in the power of balance. Our mission is to help you find harmony between your physical and mental well-being. We offer resources, advice, and a community dedicated to promoting health, happiness, and personal growth.
+        </p>
+
+          <p>
+          Berlin 10243,
+          Germany,
+          Julianmax0077@gmail.com
+          </p>
+
+      </div>
+      <div class="col-md-4">
+        <h5>Links</h5>
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+          <li><%= link_to 'Privacy Policy', privacy_policy_path %></li>
+          <li><%= link_to 'Terms of Service', terms_path %></li>
+        </ul>
+
+      </div>
+      <div class="col-md-4">
+        <h5>Social</h5>
+        <ul>
+          <li><%= link_to image_tag('facebook.png'), 'https://www.facebook.com' %></li>
+          <li><%= link_to image_tag('twitter.png'), 'https://www.twitter.com' %></li>
+          <li><%= link_to image_tag('linkedin.png'), 'https://www.linkedin.com' %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="copyright">© <%= Time.now.year %> Zenmatrix. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>

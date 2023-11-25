@@ -7,6 +7,7 @@
 
       <p class="post-preview">
         <%= truncate_words(post.body, 50) %>
+        <%= link_to 'Read more', post_path(post) %>
       </p>
 
       <% if post.image.attached? %>

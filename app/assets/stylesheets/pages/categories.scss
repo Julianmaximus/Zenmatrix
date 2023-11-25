@@ -3,11 +3,12 @@
 }
 
 #categories {
-  display: flex;
+  background-color: white;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px;
-  background-color: #f0f0f0;
+  display: flex;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 body {
@@ -31,9 +32,12 @@ body {
   transition: transform 0.3s ease;
 }
 
+.category:hover {
+  transform: scale(1.05);
+}
 
 .category:nth-child(odd) {
-  background: linear-gradient(to right, #152238, #192841, #203354, #23395d);
+  background-color: #9ECB91;
   color: white;
 }
 
@@ -80,14 +84,13 @@ body {
 }
 
 .category-show {
-  background-image: asset-url('skytree.jpg');
+  background-color:  #e2b46e;
   color: #212529;
   font-weight: bold;
   font-size: 30px;
   font-family: Arial, sans-serif;
   padding: 60px;
   box-sizing: border-box;
-  flex: 1 1 auto;
   transition: transform 0.3s ease;
   background-size: cover;
   background-position: center;
