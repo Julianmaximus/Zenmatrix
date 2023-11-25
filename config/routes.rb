@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   resources :categories
-  resources :posts
+  resources :posts do
+    collection do
+      get :search
+    end
+  end
   root 'pages#home'
   get '/about', to: 'pages#about'
   get '/terms', to: 'pages#terms'
   get '/contact', to: 'pages#contact'
   get 'privacy_policy', to: 'pages#privacy_policy'
+  get '/horoscope', to: 'pages#horoscope'
 
   # get '/posts/new', to: 'posts#new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -16,6 +21,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  devise_for :users
-  resources :users
+  # config/routes.rb
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  resources :users, only: [:new, :create]
 end

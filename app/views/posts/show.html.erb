@@ -2,7 +2,16 @@
 
 <div class="post">
   <h2 class="post-title"><%= @post.title %></h2>
-  <p class="post-body"><%= @post.body %></p>
+
+  <p class="post-body">
+    <% if user_signed_in? %>
+      <%= @post.body %>
+    <% else %>
+      <%= truncate_words(@post.body, 50) %>
+      <p>You need to <%= link_to 'sign in', new_user_session_path %> or <%= link_to 'sign up', new_user_registration_path %> to read the full post.</p>
+    <% end %>
+  </p>
+
     <% if @post.image.attached? %>
         <div class="post-image">
           <%= image_tag @post.image %>
