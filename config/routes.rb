@@ -5,10 +5,12 @@ Rails.application.routes.draw do
       get :search
     end
   end
+  get '/contact', to: 'contact_forms#new', as: 'new_contact_form'
+  post '/contact_forms', to: 'contact_forms#create', as: 'contact_forms'
+
   root 'pages#home'
   get '/about', to: 'pages#about'
   get '/terms', to: 'pages#terms'
-  get '/contact', to: 'pages#contact'
   get 'privacy_policy', to: 'pages#privacy_policy'
   get '/horoscope', to: 'pages#horoscope'
 

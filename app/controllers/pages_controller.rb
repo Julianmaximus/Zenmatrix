@@ -9,9 +9,6 @@ class PagesController < ApplicationController
   def terms
   end
 
-  def contact
-  end
-
   def privacy_policy
   end
 
