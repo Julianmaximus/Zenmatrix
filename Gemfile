@@ -94,3 +94,5 @@ group :test do
   gem 'faker'
   gem 'rubocop-rails', require: false
 end
+
+gem "cloudinary"
