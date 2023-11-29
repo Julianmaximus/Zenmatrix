@@ -1,20 +1,36 @@
-<%= form_with url: contact_forms_path, scope: :contact_form, local: true do |form| %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, required: true %>
+<div class="contact-form">
+  <div class="contact-info">
+    <h1>Contact</h1>
+    <p>Welcome to our Contact page! We value your thoughts and feedback.
+    If you have any questions, suggestions, or just want to share your experiences, please don’t hesitate to reach out.
+    We’re here to listen and improve. Your input drives our growth. Let’s connect and make this space better together.
+    Thank you for being a part of our community!”.</p>
+    <p>Julian Stanley<br>
+    Berlin 10243, Germany<br>
+    Phone: +49 1573 181 ****<br>
+    Julianmax0077@gmail.com</p>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email, required: true %>
-  </div>
+  <div class="form-container">
+    <%= form_with url: contact_forms_path, scope: :contact_form, local: true, html: { class: "form-fields" } do |f| %>
+      <div class="field">
+        <%= f.label :name, class: "field-label" %>
+        <%= f.text_field :name, required: true, class: "field-input" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message, required: true %>
-  </div>
+      <div class="field">
+        <%= f.label :email, class: "field-label" %>
+        <%= f.email_field :email, required: true, class: "field-input" %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit "Send" %>
+      <div class="field">
+        <%= f.label :message, class: "field-label" %>
+        <%= f.text_area :message, required: true, class: "field-input" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Send", id: "submit-button-contact" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
