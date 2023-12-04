@@ -66,3 +66,165 @@
     text-align: justify;
   }
 }
+
+// main homepage css
+
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+main {
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  background-image: url('home1.jpg');
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(77,96,100,0.4);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+  margin: 240px 85px 0;
+    margin-top: 240px;
+    margin-right: 85px;
+    margin-bottom: 0px;
+    margin-left: 85px;
+}
+
+.content {
+  position: relative;
+  background-color: rgba(128, 128, 128, 0.3); /* Adjust as needed */
+  color: white; /* Adjust color as needed */
+  padding: 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  align-items: center;
+  font-size: 4.5em;
+  margin-bottom: 0.5em;
+}
+
+.banner p {
+  margin-bottom: 1em;
+}
+
+.button {
+  display: inline-block;
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+
+.section1 {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+}
+
+.section2 {
+  background-color: #8cbcc6;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.section3 {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.section4 {
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 600px;
+}
+
+.section5 {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.section6 {
+  background-color: #8cbcc6;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.section7 {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+}
+
+
+/* CSS for Mobile Phones */
+@media (max-width: 960px) {
+  .hero {
+    height: auto;
+  }
+
+  .banner {
+    margin: 20px 30px 0;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .banner h1 {
+    font-size: 1.5em;
+  }
+
+  .banner p {
+    font-size: 0.7em;
+  }
+}

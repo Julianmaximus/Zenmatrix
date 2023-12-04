@@ -26,10 +26,10 @@
       <div class="field">
         <%= f.label :message, class: "field-label" %>
         <%= f.text_area :message, required: true, class: "field-input" %>
+        <%= f.submit "Send", id: "submit-button-contact" %>
       </div>
 
       <div class="actions">
-        <%= f.submit "Send", id: "submit-button-contact" %>
       </div>
     <% end %>
   </div>

@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 20px;
 }
 
 .contact-info, .form-container {
@@ -11,14 +15,6 @@
 
 /* Rest of your styles */
 
-.contact-form {
-  width: 80%;
-  margin: 0 auto;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-}
 
 .contact-form h1 {
   text-align: center;
@@ -32,9 +28,7 @@
   line-height: 1.6em;
 }
 
-.field {
-  margin-bottom: 20px;
-}
+
 
 .field-label {
   display: block;
@@ -56,12 +50,10 @@
   width: 20%;
   padding: 10px;
   border: none;
-  border-radius: 5px;
   color: white;
   background-color: #006880;
   text-transform: uppercase;
   cursor: pointer;
-  align-content: center;
   transition: background 0.3s ease;
 }
 

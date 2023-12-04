@@ -95,12 +95,12 @@ Rails.application.configure do
 
   # SMTP settings for Gmail
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    user_name: Rails.application.credentials.gmail.address,
-    password: Rails.application.credentials.gmail.password,
-    authentication: "plain",
-    enable_starttls_auto: true
+  address: "smtp.mail.yahoo.com",
+  port: 587,
+  user_name: "zenmatrixx@yahoo.com",
+  password: "your_yahoo_mail_password",
+  authentication: :login,
+  enable_starttls_auto: true
   }
 
   # Enable DNS rebinding protection and other `Host` header attacks.

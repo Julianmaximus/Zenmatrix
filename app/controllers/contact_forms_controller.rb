@@ -7,11 +7,12 @@ class ContactFormsController < ApplicationController
     # Validate the form data
     if @contact_form.valid?
       # Send an email with the form data
-      ContactFormMailer.contact_form_email(@contact_form).deliver_now
+      ContactFormMailer.contact_form_email(@contact_form, 'zenmatrixx@yahoo.com').deliver_now
 
       # Redirect to a new form
-      redirect_to new_contact_form_path
+      redirect_to new_contact_form_path, notice: 'Your message has been sent successfully.'
     else
+      flash.now[:alert] = 'There was an error sending your message. Please try again.'
       render :new
     end
   end
