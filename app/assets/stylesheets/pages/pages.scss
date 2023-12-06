@@ -88,6 +88,7 @@ main {
   align-items: center;
 }
 
+// css for hero section
 .hero {
   background-image: url('home1.jpg');
   background-color: #ccc;
@@ -111,8 +112,7 @@ body {
   background-size: cover;
   color: white;
   text-align: center;
-  text-shadow: 2px 2px 8px rgba(77,96,100,0.4);
-    text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(77,96,100,0.8);
     font-weight: 700;
     letter-spacing: 2px;
   margin: 240px 85px 0;
@@ -124,20 +124,24 @@ body {
 
 .content {
   position: relative;
-  background-color: rgba(128, 128, 128, 0.3); /* Adjust as needed */
-  color: white; /* Adjust color as needed */
+  background-color: rgba(128, 128, 128, 0.5);
+  color: white;
   padding: 20px;
   text-align: center;
+  border-radius: 7px;
 }
 
 .banner h1 {
   align-items: center;
   font-size: 4.5em;
   margin-bottom: 0.5em;
+  text-transform: uppercase;
 }
 
 .banner p {
+  font-family: 'open-sans','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-bottom: 1em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .button {
@@ -146,9 +150,11 @@ body {
   color: white;
   padding: 10px 20px;
   text-decoration: none;
+  margin-top: 30px;
 }
+// end of css for hero section
 
-
+// css for section1
 .section1 {
   background-color: white;
   padding: 20px;
@@ -156,6 +162,115 @@ body {
   width: 100%;
   height: 700px;
 }
+
+.banner2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.banner2 h1 {
+  color: black;
+  margin-bottom: 20px;
+  align-items: center;
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card, .card2 {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+
+}
+
+.card img, .card2 img {
+  width: 100%;
+  height: auto;
+}
+
+.card h2, .card2 h2 {
+  font-size: 1.5em;
+  color: black;
+  margin-top: 10px;
+}
+
+.card-text {
+  font-size: 1em;
+  color: gray;
+}
+
+.learn-more {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.6s ease;
+}
+
+.learn-more:hover {
+  background-color: black;
+  color: white;
+}
+
+// animation for section1
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swingInFromTop {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+.card-container div:nth-child(1) .card, .card-container div:nth-child(1) .card2 {
+  animation: slideInFromLeft 1s forwards;
+}
+
+.card-container div:nth-child(2) .card, .card-container div:nth-child(2) .card2 {
+  animation: swingInFromTop 1s forwards;
+}
+
+.card-container div:nth-child(n+3) .card, .card-container div:nth-child(n+3) .card2 {
+  animation: slideInFromRight 1s forwards;
+}
+
+
+// end of css for section1
+
 
 .section2 {
   background-color: #8cbcc6;
@@ -209,7 +324,8 @@ body {
 /* CSS for Mobile Phones */
 @media (max-width: 960px) {
   .hero {
-    height: auto;
+    height: 600px;
+    align-items: center;
   }
 
   .banner {
@@ -218,6 +334,12 @@ body {
 
   .content {
     padding: 10px;
+    text-shadow: 2px 2px 8px rgba(77,96,100,0.8);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+
   }
 
   .banner h1 {
