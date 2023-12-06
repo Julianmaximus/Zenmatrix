@@ -259,7 +259,7 @@ body {
   animation: slideInFromLeft 1s forwards;
 }
 
-.card-container div:nth-child(2) .card.animate, .card-container div:nth-child(2) .card2.animate {
+.card-container div:nth-child(2) .card2.animate {
   animation: slideInFromTop 1s forwards;
 }
 
