@@ -198,6 +198,7 @@ body {
   font-size: 1.5em;
   color: black;
   margin-top: 10px;
+  text-transform: uppercase;
 }
 
 .card-text {
@@ -232,17 +233,6 @@ body {
   }
 }
 
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 @keyframes swingInFromTop {
   0% {
     transform: rotateX(-100deg);
@@ -256,18 +246,28 @@ body {
   }
 }
 
-.card-container div:nth-child(1) .card, .card-container div:nth-child(1) .card2 {
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card-container div:nth-child(1) .card.animate, .card-container div:nth-child(1) .card2.animate {
   animation: slideInFromLeft 1s forwards;
 }
 
-.card-container div:nth-child(2) .card, .card-container div:nth-child(2) .card2 {
+.card-container div:nth-child(2) .card.animate, .card-container div:nth-child(2) .card2.animate {
   animation: swingInFromTop 1s forwards;
 }
 
-.card-container div:nth-child(n+3) .card, .card-container div:nth-child(n+3) .card2 {
+.card-container div:nth-child(n+3) .card.animate, .card-container div:nth-child(n+3) .card2.animate {
   animation: slideInFromRight 1s forwards;
 }
-
 
 // end of css for section1
 
