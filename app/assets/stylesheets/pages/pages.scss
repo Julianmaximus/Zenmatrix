@@ -233,15 +233,13 @@ body {
   }
 }
 
-@keyframes swingInFromTop {
+@keyframes slideInFromTop {
   0% {
-    transform: rotateX(-100deg);
-    transform-origin: top;
+    transform: translateY(-100%);
     opacity: 0;
   }
   100% {
-    transform: rotateX(0deg);
-    transform-origin: top;
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -262,12 +260,13 @@ body {
 }
 
 .card-container div:nth-child(2) .card.animate, .card-container div:nth-child(2) .card2.animate {
-  animation: swingInFromTop 1s forwards;
+  animation: slideInFromTop 1s forwards;
 }
 
 .card-container div:nth-child(n+3) .card.animate, .card-container div:nth-child(n+3) .card2.animate {
   animation: slideInFromRight 1s forwards;
 }
+
 
 // end of css for section1
 
@@ -321,7 +320,7 @@ body {
 }
 
 
-/* CSS for Mobile Phones */
+/* CSS for Mobile Phones, Hero section */
 @media (max-width: 960px) {
   .hero {
     height: 600px;
@@ -348,5 +347,27 @@ body {
 
   .banner p {
     font-size: 0.7em;
+  }
+}
+
+/* CSS for Mobile Phones, Section 1 */
+
+@media only screen and (max-width: 960px) {
+  .section1 {
+    height: auto;
+  }
+
+  .banner2 h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card, .card2 {
+    width: 100%;
+    margin: 10px 0;
   }
 }
