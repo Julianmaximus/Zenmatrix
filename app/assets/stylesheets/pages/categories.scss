@@ -9,6 +9,7 @@
   display: flex;
   padding: 5px;
   margin-bottom: 5px;
+  height: 800px;
 }
 
 body {
@@ -189,3 +190,27 @@ body {
   color: black;
 }
 // styles for category form end
+
+@media screen and (max-width: 960px) {
+  body {
+    padding-top: 50px;
+  }
+
+  #categories {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .category {
+    margin: 10px 0;
+    padding: 30px;
+  }
+
+  .post-show {
+    width: 90%;
+  }
+
+  .category-form {
+    width: 90%;
+  }
+}
