@@ -59,29 +59,31 @@
 
 
     <section class="section2">
-    <div class="banner3">
+      <div class="banner3">
         <div class="text-content3">
-            <h1>Experience Love. Grace. God.</h1>
-            <p>Qui veniam hic nobis pro patria nostra nec sunt. Lacus ipsa sed risus dolor sit amet aliquet magna. Auctor augue integer maximus gravida in fermentum eu.</p>
-            <button class="learn-more4">Learn More</button>
-          </div>
-    </div>
-    </section>
-
-
-    <section class="section3">
-      <div class="banner4">
-        <div class="image-text">
-          <%= image_tag("call.jpg", alt: "Lady working out") %>
-          <div class="text-content">
-            <h1>Experience Love. Grace. God.</h1>
-            <p>Qui veniam hic nobis pro patria nostra nec sunt. Lacus ipsa sed risus dolor sit amet aliquet magna. Auctor augue integer maximus gravida in fermentum eu.</p>
-            <button class="learn-more5">Learn More</button>
-          </div>
+          <h1>Daily Horoscope.</h1>
+          <p>Daily Alignments & Cosmic Connections,
+          Your Guide to Personal Horoscopes and Relationship Compatibility.
+          Click to Learn more...</p>
+          <%= link_to 'Learn More', horoscope_path, class: 'learn-more4' %>
         </div>
       </div>
     </section>
 
+
+    <section class="section3">
+      <div class="image-text">
+        <%= image_tag("call.jpeg", alt: "Call Hands") %>
+        <div class="text-content">
+          <h1>Welcome!</h1>
+          <p>Remember We deeply appreciate your contributions and are always open to your feedback, which guides our growth.
+          Our community is a safe space for open conversation, especially for those feeling lonely.
+          If you’re interested in volunteering and making a difference, we’re here 24/7 to discuss opportunities.
+          Contact us via email for a scheduled call. Thank you for being a vital part of our community. We eagerly await your interaction...</p>
+          <%= link_to 'CONTACT US', new_contact_form_path, class: 'learn-more5' %>
+        </div>
+      </div>
+    </section>
 
 
     <section class="section4">

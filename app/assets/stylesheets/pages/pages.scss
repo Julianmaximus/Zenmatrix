@@ -67,8 +67,31 @@
   }
 }
 
-// main homepage css
+// horoscope page css
+.horoscope-page {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+}
 
+.horoscope-title {
+  text-align: center;
+  color: #006880;
+  margin-bottom: 20px;
+}
+
+.horoscope-content {
+  font-size: 1.1em;
+  color: #888;
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+
+// main homepage css
 
 header {
   background-color: #333;
@@ -325,7 +348,7 @@ body {
 
 // css for section2
 .section2 {
-  background-image: url('horoscope_home.jpg');
+  background-image: url('horoscope_home.png');
   background-color: black;
   background-repeat: no-repeat;
   background-position: right center;
@@ -349,15 +372,18 @@ body {
 
 .text-content3 {
   width: 100%;
+  padding: 20px;
 }
 
 .text-content3 h1 {
-  font-size: 2em;
+  font-size: 3.5em;
   margin-bottom: 20px;
+  color: black;
 }
 
 .text-content3 p {
-  font-size: 1em;
+  font-size: 1.5em;
+  color: black;
 }
 
 .learn-more4 {
@@ -377,64 +403,78 @@ body {
   background-color: black; /* Change this to the color you want when hovering */
   color: #fff;
 }
-
+// end of css for section2
 
 // css for section3
 .section3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ddd;
   padding: 20px;
-  text-align: center;
   width: 100%;
   height: 800px;
-  position: relative;
-}
-
-.banner4 {
-  display: flex;
-  justify-content: center;
-  position: relative; /* Change this to relative */
-  width: 100%;
-  height: 100%;
-}
-
-.banner4 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* This will make sure your image covers the entire div */
 }
 
 .image-text {
-  position: absolute;
+  position: relative;
   width: 50%;
   height: 100%;
 }
 
+.image-text img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .text-content {
-  position: absolute; /* This will overlay the text on the image */
+  position: absolute;
+  right: -30%; /* This will make the text box stick out to the right */
   top: 50%;
-  right: 0;
-  transform: translateY(-50%); /* This will vertically center the text */
+  transform: translateY(-50%);
   background: #fff;
   padding: 20px;
   width: 50%;
+  height: auto;
 }
 
 .text-content h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: black;
+  text-align: center;
 }
 
 .text-content p {
   font-size: 1em;
+  color: #000;
+  line-height: 1.6;
+  max-width: 800px;
+  padding: 20px;
+  text-align: justify;
 }
 
 .learn-more5 {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
+  background-color: #8cbcc6;
+  color: white;
+  font-weight: bold;
   display: inline-block;
-  margin-top: 20px;
+  border: 2px solid #8cbcc6;
+  padding: 15px 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.6s ease;
+  font-size: 1.2em;
+}
+
+.learn-more5:hover {
+  background-color: white;
+  color: #8cbcc6;
 }
 
 // css for section3 end
@@ -522,4 +562,27 @@ body {
     width: 100%;
     margin: 10px 0;
   }
+}
+
+/* CSS for Mobile Phones, Section 2 */
+
+@media only screen and (max-width: 960px) {
+  .section2 {
+    height: auto;
+  }
+
+  .banner3 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .text-content3 h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .text-content3 p {
+    font-size: 0.8em;
+  }
+
 }
