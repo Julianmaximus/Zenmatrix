@@ -68,27 +68,42 @@
 }
 
 // horoscope page css
-.horoscope-page {
+.horoscope-container {
   width: 80%;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-}
-
-.horoscope-title {
   text-align: center;
-  color: #006880;
-  margin-bottom: 20px;
 }
 
-.horoscope-content {
-  font-size: 1.1em;
-  color: #888;
-  line-height: 1.6em;
-  text-align: justify;
+.horoscope-container h1 {
+  font-size: 2em;
+  color: #333;
 }
+
+.horoscope-container p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.horoscope-image {
+  margin: 20px 0;
+}
+
+.horoscope-details {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.horoscope-details h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.horoscope-details p {
+  font-size: 1em;
+  color: #666;
+}
+
 
 
 // main homepage css
@@ -351,12 +366,12 @@ body {
   background-image: url('horoscope_home.png');
   background-color: black;
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
+  background-position: center center;
+  background-size: cover;
   padding: 20px;
   text-align: center;
   width: 100%;
-  height: 600px;
+  height: 700px;
   position: relative;
 }
 
@@ -403,6 +418,15 @@ body {
   background-color: black; /* Change this to the color you want when hovering */
   color: #fff;
 }
+
+.custom-border-line {
+  border: 1px solid #000; /* Replace with the color of your choice */
+  width: 70%; /* Adjust as needed */
+  height: 1px; /* Adjust as needed */
+  margin: 20px auto;
+  display: inline-block;
+}
+
 // end of css for section2
 
 // css for section3
@@ -413,13 +437,13 @@ body {
   background-color: #ddd;
   padding: 20px;
   width: 100%;
-  height: 800px;
+  height: 700px;
 }
 
 .image-text {
   position: relative;
   width: 50%;
-  height: 100%;
+  height: auto;
 }
 
 .image-text img {
@@ -430,13 +454,16 @@ body {
 
 .text-content {
   position: absolute;
-  right: -30%; /* This will make the text box stick out to the right */
+  right: -30%;
   top: 50%;
   transform: translateY(-50%);
   background: #fff;
   padding: 20px;
-  width: 50%;
+  width: 60%;
   height: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-content h1 {
@@ -453,7 +480,7 @@ body {
   line-height: 1.6;
   max-width: 800px;
   padding: 20px;
-  text-align: justify;
+  text-align: center;
 }
 
 .learn-more5 {
@@ -463,10 +490,10 @@ body {
   display: inline-block;
   border: 2px solid #8cbcc6;
   padding: 15px 30px;
-  margin-left: 20px;
   margin-bottom: 30px;
   text-align: center;
   text-decoration: none;
+  align-items: center;
   font-size: 16px;
   transition: background-color 0.6s ease;
   font-size: 1.2em;
@@ -476,6 +503,7 @@ body {
   background-color: white;
   color: #8cbcc6;
 }
+
 
 // css for section3 end
 
@@ -566,14 +594,26 @@ body {
 
 /* CSS for Mobile Phones, Section 2 */
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1600px) {
   .section2 {
-    height: auto;
+    height: 700px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
   }
 
   .banner3 {
+    position: relative;
+    top: 0;
     width: 100%;
-    padding: 10px;
+    transform: none;
+    margin-top: 100px;
+  }
+
+  .text-content3 {
+    padding: 20px;
+    width: 100%;
   }
 
   .text-content3 h1 {
@@ -582,7 +622,80 @@ body {
   }
 
   .text-content3 p {
-    font-size: 0.8em;
+    font-size: 1em;
+  }
+
+  .learn-more {
+    font-size: 1em;
+    padding: 15px 30px;
+  }
+}
+
+/* CSS for Mobile phones, Section 3 */
+@media screen and (max-width: 960px) {
+  .section3 {
+    height: auto;
+  }
+
+  .image-text {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-content {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .image-text img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .text-content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .text-content p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .section3 {
+    height: auto;
+  }
+
+  .text-content {
+    position: absolute;
+    right: -20%; /* This will make the text box stick out to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 20px;
+    width: 50%;
+    height: auto;
+    margin-right: 100px;
+  }
+
+  .image-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 20px;
+    margin-right: 20px;
+  }
+
+  .image-text {
+    width: 70%;
+    height: auto;
   }
 
 }

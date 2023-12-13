@@ -53,6 +53,7 @@
   color: #333;
 }
 
+
 #submit-button-contact {
   display: block;
   width: 20%;
@@ -74,13 +75,46 @@
   color: white;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1600px) {
+  .contact-container {
+    height: 100%;
+  }
+
   .contact-form {
-    width: 100%;
     flex-direction: column;
+    width: 90%;
+    padding: 10px;
   }
 
   .contact-info, .form-container {
-    margin: 10px 0;
+    margin: 5px;
+    flex: 1;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-form h1 {
+    font-size: 2em;
+  }
+
+  .contact-form p {
+    font-size: 1em;
+  }
+
+  .field-input {
+    font-size: 0.8em;
+  }
+
+  .send-action {
+    display: flex;
+    margin-left: 20%;
+  }
+
+  #submit-button-contact {
+    width: 50%;
+    font-size: 1em;
+    margin-left: 13%;
   }
 }
