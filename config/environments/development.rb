@@ -79,6 +79,9 @@ Rails.application.configure do
   # Add this line to enable email deliveries in this environment
   config.action_mailer.perform_deliveries = true
 
+  config.assets.compile = true
+
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 

@@ -2,7 +2,7 @@
 
 <div class="post">
   <h2 class="post-title"><%= @post.title %></h2>
-  
+
     <% if @post.image.attached? %>
         <div class="post-image">
           <%= image_tag @post.image %>
@@ -18,7 +18,11 @@
     <% end %>
   </p>
 
+  <% if @post.category %>
   <p class="post-category"><strong>Category:</strong> <%= @post.category.name %></p>
+  <% else %>
+  <p class="post-category"><strong>Category:</strong> No Category Assigned</p>
+  <% end %>
 </div>
 
 <div class="post-actions">

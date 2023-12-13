@@ -52,10 +52,14 @@ class CategoriesController < ApplicationController
 
   # DELETE /categories/1 or /categories/1.json
   def destroy
-    @category.destroy!
+    uncategorized = Category.find_or_create_by(name: 'Uncategorized')
+    @category.posts.update_all(category_id: uncategorized.id)
 
+    @category.destroy!
     respond_to do |format|
-      format.html { redirect_to categories_url, notice: "Category was successfully destroyed." }
+      format.html do
+        redirect_to categories_url, notice: "Category was successfully destroyed and posts were moved to Uncategorized."
+      end
       format.json { head :no_content }
     end
   end

@@ -28,13 +28,18 @@ end
   )
 end
 
+# Ensure "Uncategorized" category exists
+uncategorized = Category.find_or_create_by(name: 'Uncategorized')
+
 # Create posts
 User.all.each do |user|
   5.times do
+    category = Category.where.not(name: 'Uncategorized').pluck(:id).sample
+    category = uncategorized.id if category.nil?
     user.posts.create!(
       title: Faker::Lorem.sentence(word_count: 3),
       body: Faker::Lorem.paragraph(sentence_count: 2),
-      category_id: Category.pluck(:id).sample
+      category_id: category
     )
   end
 end
