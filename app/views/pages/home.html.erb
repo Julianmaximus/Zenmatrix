@@ -62,7 +62,6 @@
         <div class="text-content3">
           <h1>Daily Horoscope.</h1>
           <div class="custom-border-line"></div>
-
           <p>Daily Alignments & Cosmic Connections,
           Your Guide to Personal Horoscopes and Relationship Compatibility.
           Click to Learn more...</p>
@@ -89,18 +88,24 @@
 
 
     <section class="section4">
-      <div class="new-posts">
-        <h1>MORE RECENT ARTICLES</h1>
-        <% @posts.each do |post| %>
-          <div class="post-card">
-            <%= link_to post_path(post) do %>
-              <%= cl_image_tag(post.image.key, width: 300, height: 300, crop: :fill) if post.image.attached? %>
-              <h2><%= post.title %></h2>
-            <% end %>
-          </div>
-        <% end %>
+      <div class="banner4">
+      <h1>RECENT STORIES</h1>
+        <div class="posts-container">
+          <% @posts.each do |post| %>
+            <div class="post-subcontainer">
+              <%= link_to post_path(post), class: "post-link" do %>
+                <%= cl_image_tag(post.image.key, class: "post-image-new", width: 400, height: 300, crop: :fill, quality: "auto", fetch_format: :auto, gravity: :auto,) if post.image.attached? %>
+                <div class="post-info">
+                  <h2 class="post-title"><%= post.title %></h2>
+                  <p class="post-author">By <%= post.author %></p>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </section>
+
 
     <section class="section5">
         <h2>Your Section 5 Text Here</h2>
