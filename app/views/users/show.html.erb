@@ -1,0 +1,17 @@
+<div class="profile-container">
+  <div class="avatar-section">
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar, class: 'profile-avatar-2' %>
+    <% else %>
+      <p class="no-avatar">No profile picture uploaded.</p>
+    <% end %>
+  </div>
+
+  <div class="info-section">
+    <h1 class="user-name"><%= @user.first_name %> <%= @user.last_name %></h1>
+    <p class="user-title"><%= @user.title %></p>
+    <p class="user-email">Email: <%= @user.email %></p>
+    <p class="user-gender">Gender: <%= @user.gender %></p>
+    <p class="user-bio"><%= @user.bio %></p>
+  </div>
+</div>

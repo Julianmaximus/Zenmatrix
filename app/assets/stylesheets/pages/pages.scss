@@ -411,18 +411,19 @@ body {
   margin-top: 20px;
   font-size: 1.2em;
   font-weight: bold;
-  transition: background-color 0.3s ease; /* Add this line for a smooth transition */
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
 }
 
 .learn-more4:hover {
-  background-color: black; /* Change this to the color you want when hovering */
+  background-color: black;
   color: #fff;
 }
 
 .custom-border-line {
-  border: 1px solid #000; /* Replace with the color of your choice */
-  width: 70%; /* Adjust as needed */
-  height: 1px; /* Adjust as needed */
+  border: 1px solid #000;
+  width: 70%;
+  height: 1px;
   margin: 20px auto;
   display: inline-block;
 }
@@ -510,6 +511,7 @@ body {
 .section4 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .posts-container {
@@ -517,7 +519,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 10px;
-  width: 90%;
+  width: 1450px;
   margin: auto;
 }
 
@@ -530,39 +532,61 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  text-decoration: none;
 }
 
 .post-image-new {
-  width: 95%;
-  height: 50%; /* Adjust as needed */
+  width: 96%;
+  height: 46%;
   object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.post-image-new:hover {
+  opacity: 0.9;
 }
 
 .post-info {
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.8);
   box-sizing: border-box;
+  margin-left: 1px;
+  width: 96%;
 }
 
 .banner4 h1 {
-  font-size: 2em; /* Adjust as needed */
+  font-size: 2em;
   text-align: left;
-  margin-left: 93px;
-  color: #333;
+  margin-left: 0.9px;
   padding: 20px 0;
-
+  margin-top: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 
 .post-title {
-  font-size: 18px;
-  color: #333;
+  font-size: 17px;
+  color: #000;
   margin: 0;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+  text-decoration: none;
+}
+
+.post-title:hover {
+  text-decoration: underline;
+  text-decoration-color: #8cbcc6;
 }
 
 .post-author {
   font-size: 13px;
   color: #777;
+  text-decoration: none;
+}
+
+.post-author:hover {
+  text-decoration: underline;
+  text-decoration-color: #777;
 }
 
 
@@ -752,3 +776,63 @@ body {
   }
 }
 /* media for section 3 ends */
+
+/* CSS for Mobile phones, Section 4 */
+
+/* CSS for larger screens (laptops, desktops) */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 1190px;
+    margin: auto;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+
+  .banner4 h1 {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 23px;
+    color: black;
+    margin-bottom: 0.5em;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+  }
+
+}
+
+/* CSS for smaller screens (mobile devices) */
+@media only screen and (max-width: 767px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* CSS for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+// css for section 4 ends

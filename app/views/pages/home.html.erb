@@ -65,7 +65,7 @@
           <p>Daily Alignments & Cosmic Connections,
           Your Guide to Personal Horoscopes and Relationship Compatibility.
           Click to Learn more...</p>
-          <%= link_to 'Learn More', horoscope_path, class: 'learn-more4' %>
+          <%= link_to 'LEARN MORE', horoscope_path, class: 'learn-more4' %>
         </div>
       </div>
     </section>
@@ -89,7 +89,7 @@
 
     <section class="section4">
       <div class="banner4">
-      <h1>RECENT STORIES</h1>
+      <h1>Recent Stories</h1>
         <div class="posts-container">
           <% @posts.each do |post| %>
             <div class="post-subcontainer">
@@ -97,7 +97,7 @@
                 <%= cl_image_tag(post.image.key, class: "post-image-new", width: 400, height: 300, crop: :fill, quality: "auto", fetch_format: :auto, gravity: :auto,) if post.image.attached? %>
                 <div class="post-info">
                   <h2 class="post-title"><%= post.title %></h2>
-                  <p class="post-author">By <%= post.author %></p>
+                  <p class="post-author">By <%= link_to post.author, user_path(post.user) %></p>
                 </div>
               <% end %>
             </div>

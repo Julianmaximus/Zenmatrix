@@ -24,6 +24,7 @@
           </a>
           <ul class="dropdown-menu">
             <% if user_signed_in? %>
+              <li><%= link_to 'View Profile', user_path(current_user), class: 'dropdown-item' %></li>
               <li><%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %></li>
               <li><%= link_to 'Sign Out', destroy_user_session_path, method: :get, class: 'dropdown-item' %></li>
             <% else %>
