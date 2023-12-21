@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[show update]
-
   # GET /users
   def index
     @users = User.all
@@ -8,6 +6,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    @user = User.find(params[:id])
   end
 
   # PATCH/PUT /users/1

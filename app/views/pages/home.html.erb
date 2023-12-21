@@ -97,7 +97,7 @@
                 <%= cl_image_tag(post.image.key, class: "post-image-new", width: 400, height: 300, crop: :fill, quality: "auto", fetch_format: :auto, gravity: :auto,) if post.image.attached? %>
                 <div class="post-info">
                   <h2 class="post-title"><%= post.title %></h2>
-                  <p class="post-author">By <%= link_to post.author, user_path(post.user) %></p>
+                  <p class="post-author">By <%= post.author %></p>
                 </div>
               <% end %>
             </div>
