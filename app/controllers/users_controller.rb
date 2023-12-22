@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   # PATCH/PUT /users/1

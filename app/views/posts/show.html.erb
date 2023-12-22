@@ -3,6 +3,7 @@
 <div class="post">
   <h2 class="post-title"><%= @post.title %></h2>
   <p class="post-author-show">By <%= link_to @post.user.first_name + " " + @post.user.last_name, user_path(@post.user) %></p>
+  <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
 
     <% if @post.image.attached? %>
         <div class="post-image">
