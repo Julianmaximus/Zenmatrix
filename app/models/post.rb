@@ -12,4 +12,8 @@ class Post < ApplicationRecord
     summary = "#{summary[0...50]}..." if summary.length > 50
     summary
   end
+
+  def author
+    "#{user.first_name} #{user.last_name}"
+  end
 end

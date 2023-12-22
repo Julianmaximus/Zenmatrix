@@ -1,0 +1,38 @@
+<div class="profile-container">
+  <div class="avatar-section">
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar, class: 'profile-avatar-2' %>
+    <% else %>
+      <p class="no-avatar">No profile picture uploaded.</p>
+    <% end %>
+  </div>
+
+  <div class="info-section">
+    <h1 class="user-name"><%= @user.first_name %> <%= @user.last_name %></h1>
+    <p class="user-title"><%= @user.title %></p>
+    <p class="user-email">Email: <%= @user.email %></p>
+    <p class="user-gender">Gender: <%= @user.gender %></p>
+    <p class="user-bio"><%= @user.bio %></p>
+  </div>
+</div>
+
+  <!-- Add the posts section here -->
+<div class="posts-profile-section">
+  <div class="posts-container-profile">
+    <% @posts.each do |post| %>
+      <div class="post-row">
+        <div class="post-column">
+          <% if post.image.attached? %>
+            <%= link_to post_path(post) do %>
+              <%= cl_image_tag(post.image.key, class: "post-image-profile", width: 400, height: 300, crop: :fill, quality: "auto", fetch_format: :auto, gravity: :auto,) if post.image.attached? %>
+            <% end %>
+          <% end %>
+          <h2><%= link_to truncate(post.title, length: 30), post_path(post) %></h2>
+          <p><%= post.summary %></p>
+          <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+        </div>
+      </div>
+    <% end %>
+    <%= paginate @posts %>
+  </div>
+</div>

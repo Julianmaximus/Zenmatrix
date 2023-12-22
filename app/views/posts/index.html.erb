@@ -4,17 +4,18 @@
       <p class="post-title">
         <%= link_to post.title, post %>
       </p>
+      
+      <% if post.image.attached? %>
+        <div class="post-image">
+          <%= link_to (image_tag url_for(post.image)), post %>
+        </div>
+      <% end %>
 
       <p class="post-preview">
         <%= truncate_words(post.body, 50) %>
         <%= link_to 'Read more', post_path(post) %>
       </p>
 
-      <% if post.image.attached? %>
-        <div class="post-image">
-          <%= link_to (image_tag url_for(post.image)), post %>
-        </div>
-      <% end %>
     </div>
   <% end %>
   <%= link_to "New post", new_post_path, class: "new-post-link" %>

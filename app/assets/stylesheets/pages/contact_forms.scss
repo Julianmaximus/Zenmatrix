@@ -1,0 +1,120 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e3e3e3;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.contact-info, .form-container {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Rest of your styles */
+
+
+.contact-form h1 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.contact-form p {
+  font-size: 1.1em;
+  color: #000;
+  line-height: 1.6em;
+}
+
+
+
+.field-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.field-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+
+#submit-button-contact {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  color: #000;
+  background-color: white;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: 80px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+#submit-button-contact:hover {
+  background-color: #000;
+  color: white;
+}
+
+@media screen and (max-width: 1600px) {
+  .contact-container {
+    height: 100%;
+  }
+
+  .contact-form {
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .contact-info, .form-container {
+    margin: 5px;
+    flex: 1;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-form h1 {
+    font-size: 2em;
+  }
+
+  .contact-form p {
+    font-size: 1em;
+  }
+
+  .field-input {
+    font-size: 0.8em;
+  }
+
+  .send-action {
+    display: flex;
+    margin-left: 20%;
+  }
+
+  #submit-button-contact {
+    width: 50%;
+    font-size: 1em;
+    margin-left: 13%;
+  }
+}

@@ -2,6 +2,14 @@
 
 <div class="post">
   <h2 class="post-title"><%= @post.title %></h2>
+  <p class="post-author-show">By <%= link_to @post.user.first_name + " " + @post.user.last_name, user_path(@post.user) %></p>
+  <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
+
+    <% if @post.image.attached? %>
+        <div class="post-image">
+          <%= image_tag @post.image %>
+        </div>
+    <% end %>
 
   <p class="post-body">
     <% if user_signed_in? %>
@@ -12,12 +20,11 @@
     <% end %>
   </p>
 
-    <% if @post.image.attached? %>
-        <div class="post-image">
-          <%= image_tag @post.image %>
-        </div>
-    <% end %>
+  <% if @post.category %>
   <p class="post-category"><strong>Category:</strong> <%= @post.category.name %></p>
+  <% else %>
+  <p class="post-category"><strong>Category:</strong> No Category Assigned</p>
+  <% end %>
 </div>
 
 <div class="post-actions">

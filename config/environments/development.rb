@@ -34,15 +34,29 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :cloudinary
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "localhost:3000", protocol: "http" }
+
+  # SMTP settings for Gmail
+  config.action_mailer.smtp_settings = {
+  address: "smtp.mail.yahoo.com",
+  port: 587,
+  user_name: "zenmatrixx@yahoo.com",
+  password: "your_yahoo_mail_password",
+  authentication: :login,
+  enable_starttls_auto: true
+  }
+
 
   # Raise exceptions for disallowed deprecations.
   config.active_support.disallowed_deprecation = :raise
@@ -61,6 +75,12 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+
+  # Add this line to enable email deliveries in this environment
+  config.action_mailer.perform_deliveries = true
+
+  config.assets.compile = true
+
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

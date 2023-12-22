@@ -1,8 +1,123 @@
+<div class="container-home">
+  <main>
+    <section class="hero">
+      <div class="banner">
+        <div class="content">
+          <h1>Your JOURNEY OF INNER PEACE AND SELF DISCOVERY</h1>
+          <p>“Explore the tranquility within you,
+          Click To Read More Stories on Health and Fitness”</p>
+          <a href="/posts" class="button">READ MORE</a>
+        </div>
+      </div>
+    </section>
 
-<h1>pages#home</h1>
+    <section class="section1">
+    <div class="banner2">
+      <h1>Sportlight</h1>
+      <div class="u-border-3 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
+      <p class="card-text2">Discover and Explore the Path of Joy, from Personal Growth to Unforgettable Adventures..</p>
+      <div class="card-container" data-controller="slide">
+        <div>
+          <div class="card" data-slide-target="card">
+            <%= image_tag("happy_woman.jpg", alt: "Lady with her pet") %>
+            <h2>Unleashed Happiness</h2>
+            <p class="card-text">Embrace the joy of companionship, with man’s best friend..</p>
+          </div>
+          <div class="card2" data-slide-target="card2">
+            <p>Click to learn more about the post. Click once more to hide the details and dive into the story.</p>
+            <button class="learn-more">LEARN MORE</button>
+          </div>
+        </div>
 
-<%= link_to 'About', about_path %>
-<%= link_to 'Terms', terms_path %>
-<%= link_to 'Contact Us', contact_path %>
-<%= link_to 'Privacy Policy', privacy_policy_path %>
-<%= link_to 'Categories', categories_path %>
+        <div>
+          <div class="card" data-slide-target="card">
+            <%= image_tag("solo_workout.jpg", alt: "Lady working out") %>
+            <h2>Empower Your Life</h2>
+            <p class="card-text">Discover the strength within, through fitness and determination..</p>
+          </div>
+          <div class="card2" data-slide-target="card2">
+            <p>Click to learn more about the book. Click once more to hide the details and dive into the story.</p>
+            <button class="learn-more">LEARN MORE</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="card" data-slide-target="card">
+            <%= image_tag("group_hike.jpg", alt: "Friends Hiking") %>
+            <h2>Journey To The Peaks</h2>
+            <p class="card-text">Experience the thrill of adventure with every step you take..</p>
+          </div>
+          <div class="card2" data-slide-target="card2">
+            <p>Click to learn more about the book. Click once more to hide the details and dive into the story.</p>
+            <button class="learn-more">LEARN MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+    <section class="section2">
+      <div class="banner3">
+        <div class="text-content3">
+          <h1>Daily Horoscope.</h1>
+          <div class="custom-border-line"></div>
+          <p>Daily Alignments & Cosmic Connections,
+          Your Guide to Personal Horoscopes and Relationship Compatibility.
+          Click to Learn more...</p>
+          <%= link_to 'LEARN MORE', horoscope_path, class: 'learn-more4' %>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section3">
+      <div class="image-text">
+        <%= image_tag("call.jpeg", alt: "Call Hands") %>
+        <div class="text-content">
+          <h1>Welcome!</h1>
+          <div class="u-border-3 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
+          <p>Remember, you are not alone.
+          Our community is a safe space for open conversations, especially for those feeling lonely.
+          If you’re interested in volunteering and making a difference, we’re here 24/7 to discuss opportunities.
+          Contact us via email for a scheduled call.  We eagerly await your interaction...</p>
+          <%= link_to 'CONTACT US', new_contact_form_path, class: 'learn-more5' %>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section4">
+      <div class="banner4">
+      <h1>Recent Stories</h1>
+        <div class="posts-container">
+          <% @posts.each do |post| %>
+            <div class="post-subcontainer">
+              <%= link_to post_path(post), class: "post-link" do %>
+                <%= cl_image_tag(post.image.key, class: "post-image-new", width: 400, height: 300, crop: :fill, quality: "auto", fetch_format: :auto, gravity: :auto,) if post.image.attached? %>
+                <div class="post-info">
+                  <h2 class="post-title"><%= post.title %></h2>
+                  <p class="post-author">By <%= post.author %></p>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section5">
+        <h2>Your Section 5 Text Here</h2>
+    </section>
+
+    <section class="section6">
+        <h2>Your Section 6 Text Here</h2>
+    </section>
+
+    <section class="section7">
+        <h2>Your Section 7 Text Here</h2>
+    </section>
+    <!-- Add more sections as needed -->
+  </main>
+</div>

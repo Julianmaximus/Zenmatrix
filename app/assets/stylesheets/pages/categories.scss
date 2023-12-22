@@ -9,6 +9,7 @@
   display: flex;
   padding: 5px;
   margin-bottom: 5px;
+  height: 800px;
 }
 
 body {
@@ -83,24 +84,42 @@ body {
   font-size: 1.2em;
 }
 
-.category-show {
-  background-color:  #e2b46e;
-  color: #212529;
+.category-container-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 800px;
+  position: relative;
+}
+
+.category-container-show > div {
+  flex-shrink: 0; /* Prevents the content from shrinking smaller than its content */
+}
+
+.category-title {
+  color: #000;
   font-weight: bold;
   font-size: 30px;
   font-family: Arial, sans-serif;
-  padding: 60px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
+  padding: 10px;
   background-size: cover;
   background-position: center;
-  margin-bottom: 5px;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .posts-header {
   font-size: 1.5em;
   margin-bottom: 1em;
+}
+
+.custom-border-line-show {
+  border: 1px solid #000;
+  width: 40%;
+  height: 1px;
+  margin: 20px auto;
+  display: inline-block;
 }
 
 .post-show {
@@ -172,7 +191,6 @@ body {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 .submit-button {
@@ -189,3 +207,27 @@ body {
   color: black;
 }
 // styles for category form end
+
+@media screen and (max-width: 960px) {
+  body {
+    padding-top: 50px;
+  }
+
+  #categories {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .category {
+    margin: 10px 0;
+    padding: 30px;
+  }
+
+  .post-show {
+    width: 90%;
+  }
+
+  .category-form {
+    width: 90%;
+  }
+}

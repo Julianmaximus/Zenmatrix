@@ -1,0 +1,837 @@
+// about page css
+.about-page {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+
+  .about-title {
+    text-align: center;
+    color: #006880;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    font-size: 1.1em;
+    color: #888;
+    line-height: 1.6em;
+    text-align: justify;
+  }
+}
+
+// policy page css
+.policy-page {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+
+  .policy-title {
+    text-align: center;
+    color: #006880;
+    margin-bottom: 20px;
+  }
+
+  .policy-content {
+    font-size: 1.1em;
+    color: #888;
+    line-height: 1.6em;
+    text-align: justify;
+  }
+}
+
+// terms page css
+.terms-page {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+
+  .terms-title {
+    text-align: center;
+    color: #006880;
+    margin-bottom: 20px;
+  }
+
+  .terms-content {
+    font-size: 1.1em;
+    color: #888;
+    line-height: 1.6em;
+    text-align: justify;
+  }
+}
+
+// horoscope page css
+.horoscope-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.horoscope-container h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.horoscope-container p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.horoscope-image {
+  margin: 20px 0;
+}
+
+.horoscope-details {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.horoscope-details h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.horoscope-details p {
+  font-size: 1em;
+  color: #666;
+}
+
+
+
+// main homepage css
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+main {
+  flex-direction: column;
+  align-items: center;
+}
+
+// css for hero section
+.hero {
+  background-image: url('home1.jpg');
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(77,96,100,0.8);
+    font-weight: 700;
+    letter-spacing: 2px;
+  margin: 240px 85px 0;
+    margin-top: 240px;
+    margin-right: 85px;
+    margin-bottom: 0px;
+    margin-left: 85px;
+}
+
+.content {
+  position: relative;
+  //background-color: rgba(128, 128, 128, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.banner h1 {
+  align-items: center;
+  font-size: 4.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.banner p {
+  font-family: 'Georgia', sans-serif;
+  //background-color: rgba(128, 128, 128, 0.5);
+  margin-bottom: 1em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.button {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  border: 4px solid white;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+// end of css for hero section
+
+// css for section1
+.section1 {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.banner2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.banner2 h1 {
+  color: black;
+  margin-bottom: 20px;
+  align-items: center;
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card, .card2 {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.card img, .card2 img {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  background-color: #8cbcc6;
+}
+
+.card h2, .card2 h2 {
+  font-size: 1.5em;
+  color: white;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 1em;
+  color: white;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+}
+
+.card-text2 {
+  font-size: 1em;
+  color: black;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+  margin-top: 10px;
+}
+
+.learn-more {
+  background-color: #8cbcc6;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  border: 2px solid #8cbcc6;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.6s ease;
+  font-size: 1.2em;
+}
+
+.learn-more:hover {
+  background-color: white;
+  color: #8cbcc6;
+}
+
+.u-border-3 {
+  border-width: 3px;
+}
+
+.u-border-palette-1-base {
+  border-color: #8cbcc6;
+}
+
+.u-line {
+  display: inline-block;
+}
+
+.u-line-horizontal {
+  width: 40%;
+  height: 1px;
+
+}
+
+.u-line-1 {
+  border-bottom-style: solid;
+}
+
+
+// animation for section1
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card-container div:nth-child(1) .card.animate, .card-container div:nth-child(1) .card2.animate {
+  animation: slideInFromLeft 1s forwards;
+}
+
+/*.card-container div:nth-child(2) .card2.animate {
+  animation: slideInFromTop 1s forwards;
+} */
+
+.card-container div:nth-child(n+3) .card.animate, .card-container div:nth-child(n+3) .card2.animate {
+  animation: slideInFromRight 1s forwards;
+}
+// end of css for section1
+
+// css for section2
+.section2 {
+  background-image: url('horoscope_home.png');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+
+.banner3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #fff;
+  padding: 20px;
+  width: 50%;
+  transform: translateY(-50%); /* Adjusts the position to center */
+}
+
+.text-content3 {
+  width: 100%;
+  padding: 20px;
+}
+
+.text-content3 h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.text-content3 p {
+  font-size: 1.5em;
+  color: black;
+}
+
+.learn-more4 {
+  background-color: white;
+  color: black;
+  padding: 15px 30px;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid black;
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more4:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.custom-border-line {
+  border: 1px solid #000;
+  width: 70%;
+  height: 1px;
+  margin: 20px auto;
+  display: inline-block;
+}
+
+// end of css for section2
+
+// css for section3
+.section3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  padding: 20px;
+  width: 100%;
+  height: 700px;
+}
+
+.image-text {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+.image-text img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-content {
+  position: absolute;
+  right: -30%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 20px;
+  width: 60%;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: black;
+  text-align: center;
+}
+
+.text-content p {
+  font-size: 1em;
+  color: #000;
+  line-height: 1.6;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+.learn-more5 {
+  background-color: #8cbcc6;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  border: 2px solid #8cbcc6;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.6s ease;
+  font-size: 1.2em;
+}
+
+.learn-more5:hover {
+  background-color: white;
+  color: #8cbcc6;
+}
+
+// css for section3 end
+
+// css for section4
+.section4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 1450px;
+  margin: auto;
+}
+
+.post-subcontainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.post-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.post-image-new {
+  width: 96%;
+  height: 46%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.post-image-new:hover {
+  opacity: 0.9;
+}
+
+.post-info {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  margin-left: 1px;
+  width: 96%;
+}
+
+.banner4 h1 {
+  font-size: 2em;
+  text-align: left;
+  margin-left: 0.9px;
+  padding: 20px 0;
+  margin-top: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+
+.post-title {
+  font-size: 17px;
+  color: #000;
+  margin: 0;
+  font-family: 'Lucida Sans Unicode', sans-serif;
+  text-decoration: none;
+}
+
+.post-title:hover {
+  text-decoration: underline;
+  text-decoration-color: #8cbcc6;
+}
+
+.post-author {
+  font-size: 13px;
+  color: #777;
+  text-decoration: none;
+}
+
+.post-author:hover {
+  text-decoration: underline;
+  text-decoration-color: #777;
+}
+
+
+// css for section4 end
+
+.section5 {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.section6 {
+  background-color: #8cbcc6;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+}
+
+.section7 {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+}
+
+
+/* CSS for Mobile Phones, Hero section */
+@media (max-width: 960px) {
+  .hero {
+    height: 600px;
+    align-items: center;
+  }
+
+  .banner {
+    margin: 20px 30px 0;
+  }
+
+  .content {
+    padding: 10px;
+    text-shadow: 2px 2px 8px rgba(77,96,100,0.8);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+
+  }
+
+  .banner h1 {
+    font-size: 1.5em;
+  }
+
+  .banner p {
+    font-size: 0.7em;
+  }
+}
+
+/* CSS for Mobile Phones, Section 1 */
+
+@media only screen and (max-width: 960px) {
+  .section1 {
+    height: auto;
+  }
+
+  .banner2 h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card, .card2 {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* CSS for Mobile Phones, Section 2 */
+
+@media only screen and (max-width: 1600px) {
+  .section2 {
+    height: 700px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .banner3 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    transform: none;
+    margin-top: 100px;
+  }
+
+  .text-content3 {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .text-content3 h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .text-content3 p {
+    font-size: 1em;
+  }
+
+  .learn-more {
+    font-size: 1em;
+    padding: 15px 30px;
+  }
+}
+
+/* CSS for Mobile phones, Section 3 */
+@media screen and (max-width: 960px) {
+  .section3 {
+    height: auto;
+  }
+
+  .image-text {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-content {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .image-text img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .text-content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .text-content p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .section3 {
+    height: auto;
+  }
+
+  .text-content {
+    position: absolute;
+    right: -20%; /* This will make the text box stick out to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 20px;
+    width: 50%;
+    height: auto;
+    margin-right: 100px;
+  }
+
+  .image-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 20px;
+    margin-right: 20px;
+  }
+
+  .image-text {
+    width: 70%;
+    height: auto;
+  }
+}
+/* media for section 3 ends */
+
+/* CSS for Mobile phones, Section 4 starts here */
+/* CSS for larger screens (laptops, desktops) */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 1190px;
+    margin: auto;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+
+  .banner4 h1 {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 23px;
+    color: black;
+    margin-bottom: 0.5em;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+  }
+
+}
+
+/* CSS for smaller screens (mobile devices) */
+@media only screen and (max-width: 767px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* CSS for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+// css for section 4 ends

@@ -1,27 +1,28 @@
 <p class="notice" style="color: green"><%= notice %></p>
 
-<div class="category-show">
-  <%= render @category %>
-</div>
-<% @category.posts.each do |post| %>
-  <div class="post-show">
-    <h3 class="post-title"><%= link_to post.title, post_path(post) %></h3>
+<div class="category-container-show">
+  <h2 class="category-title"><%= @category.name %></h2>
+  <div class="custom-border-line-show"></div>
+  <% @category.posts.each do |post| %>
+    <div class="post-show">
+      <h3 class="post-title"><%= link_to post.title, post_path(post) %></h3>
 
-    <p class="post-body">
-    <% if user_signed_in? %>
-      <%= truncate_words(post.body, 15) %>
-    <% else %>
-      <%= truncate_words(post.body, 15) %>
-      <p>You need to <%= link_to 'sign in', new_user_session_path %> or <%= link_to 'sign up', new_user_registration_path %> to read the full post.</p>
-    <% end %>
-  </p>
+      <p class="post-body">
+      <% if user_signed_in? %>
+        <%= truncate_words(post.body, 15) %>
+      <% else %>
+        <%= truncate_words(post.body, 15) %>
+        <p>You need to <%= link_to 'sign in', new_user_session_path %> or <%= link_to 'sign up', new_user_registration_path %> to read the full post.</p>
+      <% end %>
+    </p>
+    </div>
+  <% end %>
+
+  <div class="category-actions">
+  <%= paginate @posts %>
+    <%= link_to "Edit this category", edit_category_path(@category), class: "edit-category-link" %> |
+    <%= link_to "Back to categories", categories_path, class: "back-to-categories-link" %>
+
+    <%= button_to "Destroy this category", @category, method: :delete, class: "destroy-category-button" %>
   </div>
-<% end %>
-
-<div class="category-actions">
-<%= paginate @posts %>
-  <%= link_to "Edit this category", edit_category_path(@category), class: "edit-category-link" %> |
-  <%= link_to "Back to categories", categories_path, class: "back-to-categories-link" %>
-
-  <%= button_to "Destroy this category", @category, method: :delete, class: "destroy-category-button" %>
 </div>
