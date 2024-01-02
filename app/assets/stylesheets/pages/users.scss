@@ -190,3 +190,42 @@
 // media queries for tablets ends
 
 // profile section css ends here
+
+// post profile section css starts here
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .posts-container-profile {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .post-row {
+    flex-direction: column;
+  }
+  .post-image-profile {
+    height: 60%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .posts-container-profile {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 901px and up) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .posts-container-profile {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 1201px and up) */
+@media only screen and (min-width: 1200px) {
+  .posts-container-profile {
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+  }
+}

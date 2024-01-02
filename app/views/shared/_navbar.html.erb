@@ -9,6 +9,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
+          <%= link_to 'About Us', about_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
           <%= link_to 'Blog Posts', posts_path, class: 'nav-link active white-text', 'aria-current': 'page' %>
         </li>
         <li class="nav-item">
@@ -34,9 +37,6 @@
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to 'Contact', new_contact_form_path, class: 'dropdown-item' %></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
 

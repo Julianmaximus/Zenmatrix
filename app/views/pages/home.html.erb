@@ -11,6 +11,7 @@
       </div>
     </section>
 
+
     <section class="section1">
     <div class="banner2">
       <h1>Sportlight</h1>
@@ -57,36 +58,6 @@
     </section>
 
 
-    <section class="section2">
-      <div class="banner3">
-        <div class="text-content3">
-          <h1>Daily Horoscope.</h1>
-          <div class="custom-border-line"></div>
-          <p>Daily Alignments & Cosmic Connections,
-          Your Guide to Personal Horoscopes and Relationship Compatibility.
-          Click to Learn more...</p>
-          <%= link_to 'LEARN MORE', horoscope_path, class: 'learn-more4' %>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section3">
-      <div class="image-text">
-        <%= image_tag("call.jpeg", alt: "Call Hands") %>
-        <div class="text-content">
-          <h1>Welcome!</h1>
-          <div class="u-border-3 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
-          <p>Remember, you are not alone.
-          Our community is a safe space for open conversations, especially for those feeling lonely.
-          If you’re interested in volunteering and making a difference, we’re here 24/7 to discuss opportunities.
-          Contact us via email for a scheduled call.  We eagerly await your interaction...</p>
-          <%= link_to 'CONTACT US', new_contact_form_path, class: 'learn-more5' %>
-        </div>
-      </div>
-    </section>
-
-
     <section class="section4">
       <div class="banner4">
       <h1>Recent Stories</h1>
@@ -106,13 +77,91 @@
       </div>
     </section>
 
-
-    <section class="section5">
-        <h2>Your Section 5 Text Here</h2>
+    <section class="section2">
+      <div class="banner3">
+        <div class="text-content3">
+          <h1>Daily Horoscope.</h1>
+          <div class="custom-border-line"></div>
+          <p>Daily Alignments & Cosmic Connections,
+          Your Guide to Personal Horoscopes and Relationship Compatibility.
+          Click to Learn more...</p>
+          <%= link_to 'LEARN MORE', horoscope_path, class: 'learn-more4' %>
+        </div>
+      </div>
     </section>
 
+    <section class="section3">
+      <div class="image-text">
+        <%= image_tag("call.jpeg", alt: "Call Hands") %>
+        <div class="text-content">
+          <h1>Welcome!</h1>
+          <div class="u-border-3 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
+          <p>Remember, you are not alone.
+          Our community is a safe space for open conversations, especially for those feeling lonely, isolated, and disconnected,
+          we’re here 24/7 to offer counselling and support.
+          Contact us via email for a scheduled call.  We eagerly await your interaction...</p>
+          <%= link_to 'CONTACT US', new_contact_form_path, class: 'learn-more5' %>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="section5">
+      <div id="carouselExampleInterval" class="carousel slide" data-controller="carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <%= image_tag("volunteer.jpg", class: "d-block w-100", alt: "First slide") %>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Want to Make a Difference?, Join </h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <%= image_tag("charity_image.jpg", class: "d-block w-100", alt: "Second slide") %>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Second Slide Caption</h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <%= image_tag("donate_image.jpg", class: "d-block w-100", alt: "Third slide") %>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Third Slide Caption</h1>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+
     <section class="section6">
-        <h2>Your Section 6 Text Here</h2>
+      <div class="news-section">
+        <h2>Latest Articles</h2>
+        <% @news_articles.each do |article| %>
+          <div class="news-article">
+            <%= link_to post_path(article) do %>
+              <% if article.image.attached? %>
+                <%= image_tag(article.image) %>
+              <% end %>
+              <h3><%= article.title %></h3>
+              <p class="post-author">By <%= article.author %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </section>
 
     <section class="section7">

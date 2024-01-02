@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   belongs_to :category
 
   has_one_attached :image
+  has_one_attached :video
 
   validates :title, presence: true
   validates :body, presence: true

@@ -84,6 +84,12 @@
 // styles for posts pagination end
 
 // styles for post show page start
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
 .post-title {
   font-size: 24px;
   color: #333;
@@ -138,6 +144,13 @@
 .destroy-post-button:hover {
   background-color: #0056b3;
 }
+
+/* New styles for the video */
+.post-video {
+  width: 80%;
+  height: auto;
+}
+
 // styles for post show page end
 
 // styles for post form start
