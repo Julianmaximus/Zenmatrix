@@ -594,15 +594,16 @@ body {
 // css for section5 starts
 
 .section5 {
-  background-color: #f8f9fa;
+  background-color: #ddd;
   padding: 20px 0;
   height: 700px;
   width: 100%;
 }
 
 .carousel {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .carousel-indicators button {
@@ -625,6 +626,7 @@ body {
   height: 100%;
   object-fit: cover;
   width: 100%;
+  padding: 70px;
 }
 
 .carousel-caption {
@@ -664,6 +666,34 @@ body {
   width: 100%;
   height: 800px;
 }
+
+.news-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 1450px;
+  margin: auto;
+}
+
+.news-article.large {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.news-article.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+
+
+.news-article img {
+  width: 400px;
+  height: 200px;
+}
+
+
 
 
 

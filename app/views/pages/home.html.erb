@@ -4,8 +4,7 @@
       <div class="banner">
         <div class="content">
           <h1>Your JOURNEY OF INNER PEACE AND SELF DISCOVERY</h1>
-          <p>“Explore the tranquility within you,
-          Click To Read More Stories on Health and Fitness”</p>
+          <p>“Click To Read More Stories on Health and Fitness”</p>
           <a href="/posts" class="button">READ MORE</a>
         </div>
       </div>
@@ -119,7 +118,7 @@
           <div class="carousel-item active" data-bs-interval="10000">
             <%= image_tag("volunteer.jpg", class: "d-block w-100", alt: "First slide") %>
             <div class="carousel-caption d-none d-md-block">
-              <h1>Want to Make a Difference?, Join </h1>
+              <h1>We are Looking for Volunteers</h1>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="10000">
@@ -148,21 +147,26 @@
 
 
     <section class="section6">
-      <div class="news-section">
-        <h2>Latest Articles</h2>
-        <% @news_articles.each do |article| %>
-          <div class="news-article">
-            <%= link_to post_path(article) do %>
-              <% if article.image.attached? %>
-                <%= image_tag(article.image) %>
-              <% end %>
-              <h3><%= article.title %></h3>
-              <p class="post-author">By <%= article.author %></p>
+  <div class="news-container">
+    <h2 class="news-heading">Latest Articles</h2>
+    <div class="news-section">
+      <% @news_articles.each do |article| %>
+        <div class="news-article">
+          <%= link_to post_path(article), class: 'article-link' do %>
+            <% if article.image.attached? %>
+              <%= image_tag(article.image, class: 'article-image') %>
             <% end %>
-          </div>
-        <% end %>
-      </div>
-    </section>
+            <div class="news-content">
+              <h3 class="article-title"><%= article.title %></h3>
+              <p class="post-author">By <%= article.author %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
 
     <section class="section7">
         <h2>Your Section 7 Text Here</h2>

@@ -151,6 +151,30 @@
   height: auto;
 }
 
+.youtube-thumbnail-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.youtube-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+
+
 // styles for post show page end
 
 // styles for post form start

@@ -25,6 +25,12 @@
     <%= video_tag url_for(@post.video), { controls: true, class: "post-video" } %>
   <% end %>
 
+  <% if @post.youtube_url.present? %>
+    <div class="youtube-video">
+      <%= raw youtube_embed(@post.youtube_url) %>
+    </div>
+  <% end %>
+
 
   <% if @post.category %>
     <p class="post-category"><strong>Category:</strong> <%= @post.category.name %></p>
