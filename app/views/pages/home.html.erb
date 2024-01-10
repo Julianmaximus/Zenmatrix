@@ -167,11 +167,12 @@
       <div class="news-container">
         <h2 class="news-heading">Latest Articles</h2>
         <div class="news-section">
-          <% @news_articles.each do |article| %>
+          <% @news_articles.each_with_index do |article, index| %>
             <div class="news-article">
               <%= link_to post_path(article), class: 'article-link' do %>
                 <% if article.image.attached? %>
-                  <%= image_tag(article.image, class: 'article-image') %>
+                  <% image_class = index == 0 ? 'article-image' : 'article-image small' %>
+                  <%= image_tag(article.image, class: image_class) %>
                 <% end %>
                 <div class="news-content">
                   <h3 class="article-title"><%= article.title %></h3>
@@ -183,6 +184,7 @@
         </div>
       </div>
     </section>
+
 
 
     <section class="section7">
