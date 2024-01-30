@@ -1,3 +1,4 @@
+<div class="container">
 <p style="color: green"><%= notice %></p>
 
 <div class="post">
@@ -20,10 +21,21 @@
     <% end %>
   </p>
 
+  <% if @post.video.attached? %>
+    <%= video_tag url_for(@post.video), { controls: true, class: "post-video" } %>
+  <% end %>
+
+  <% if @post.youtube_url.present? %>
+    <div class="youtube-video">
+      <%= raw youtube_embed(@post.youtube_url) %>
+    </div>
+  <% end %>
+
+
   <% if @post.category %>
-  <p class="post-category"><strong>Category:</strong> <%= @post.category.name %></p>
+    <p class="post-category"><strong>Category:</strong> <%= @post.category.name %></p>
   <% else %>
-  <p class="post-category"><strong>Category:</strong> No Category Assigned</p>
+    <p class="post-category"><strong>Category:</strong> No Category Assigned</p>
   <% end %>
 </div>
 
@@ -32,4 +44,5 @@
   <%= link_to "Back to posts", posts_path, class: "back-to-posts-link" %>
 
   <%= button_to "Destroy this post", @post, method: :delete, class: "destroy-post-button" %>
+</div>
 </div>

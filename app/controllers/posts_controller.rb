@@ -70,8 +70,14 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def youtube_embed(youtube_url)
+    video_id = youtube_url.split("v=").last
+    "<iframe width='560' height='315' src='https://www.youtube.com/embed/#{video_id}' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+  end
+  helper_method :youtube_embed
+
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:title, :body, :category_id, :image)
+    params.require(:post).permit(:title, :body, :category_id, :image, :video, :youtube_url)
   end
 end

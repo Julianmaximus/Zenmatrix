@@ -3,6 +3,9 @@
 @import "config/colors";
 @import "config/layouts";
 
+// Override Bootstrap variables
+$carousel-control-color: #000;
+
 // External libraries
 @import "bootstrap";
 @import "font-awesome";
